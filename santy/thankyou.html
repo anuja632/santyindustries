@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thank You | Santy Industries</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#071c35,#0b2c5a);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.thankyou-wrapper{
+  background:#fff;
+  max-width:500px;
+  width:90%;
+  padding:50px 30px;
+  text-align:center;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.3);
+  animation:fadeUp 1s ease;
+}
+
+.icon-box{
+  width:90px;
+  height:90px;
+  margin:0 auto 20px;
+  background:#28a745;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:40px;
+  animation:pulse 1.5s infinite;
+}
+
+.thankyou-wrapper h1{
+  font-size:28px;
+  margin-bottom:10px;
+  color:#071c35;
+}
+
+.thankyou-wrapper p{
+  font-size:16px;
+  color:#555;
+  margin-bottom:30px;
+  line-height:1.6;
+}
+
+.btn-group{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.btn{
+  text-decoration:none;
+  padding:12px 22px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
+  transition:0.3s;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+
+.btn-home{
+  background:#071c35;
+  color:#fff;
+}
+
+.btn-home:hover{
+  background:#0b2c5a;
+}
+
+.btn-whatsapp{
+  background:#25D366;
+  color:#fff;
+}
+
+.btn-whatsapp:hover{
+  background:#1ebe5d;
+}
+
+.footer-text{
+  margin-top:25px;
+  font-size:13px;
+  color:#888;
+}
+
+/* Animations */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.08);}
+  100%{transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="thankyou-wrapper">
+
+  <div class="icon-box">
+    <i class="fas fa-check"></i>
+  </div>
+
+  <h1>Thank You!</h1>
+  <p>
+    Your enquiry has been successfully submitted.  
+    Our team at <b>Santy Industries</b> will contact you shortly.
+  </p>
+
+  <div class="btn-group">
+    <a href="index.html" class="btn btn-home">
+      <i class="fas fa-home"></i> Back to Home
+    </a>
+
+    <a href="https://wa.me/918438318922?text=Hello%20Santy%20Industries,%20I%20would%20like%20to%20enquire%20about%20your%20services.%20Please%20contact%20me." 
+   target="_blank" class="btn btn-whatsapp">
+      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+  </div>
+
+  <div class="footer-text">
+    © 2026 Santy Industries. All rights reserved.
+  </div>
+
+</div>
+
+</body>
+</html>
