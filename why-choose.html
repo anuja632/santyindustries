@@ -297,8 +297,250 @@ style="background-image:url('images/background/bg.png');">
     </div>
     <canvas class="particles-js-canvas-el" width="1575" height="1033" style="width: 100%; height: 100%;"></canvas>
 </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Why Choose Us - Glass Cards</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
+<style>
+:root{
+  --primary:#0b5fa5;
+  --secondary:#ff6a00;
+
+  --rgba-primary-1: rgba(11,95,165,0.08);
+  --rgba-primary-4: rgba(11,95,165,0.4);
+  --rgba-secondary-1: rgba(255,106,0,0.08);
+  --rgba-secondary-4: rgba(255,106,0,0.4);
+
+  --dark-text:#111;
+  --muted-text:#666;
+}
+
+/* Section */
+.why-glass{
+  padding:90px 0;
+  background:linear-gradient(120deg,
+    var(--rgba-primary-1),
+    var(--rgba-secondary-1),
+    #fff
+  );
+  position:relative;
+  overflow:hidden;
+  font-family:Arial, sans-serif;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
+}
+
+/* Heading */
+.section-head{
+  text-align:center;
+  max-width:750px;
+  margin:0 auto 60px;
+}
+.section-head .sub-title{
+  color:var(--primary);
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+.section-head .title{
+  font-size:36px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+.section-head .desc{
+  color:#666;
+  font-size:15px;
+}
+
+/* Grid */
+.glass-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:25px;
+}
+
+/* Tablet */
+@media(max-width:992px){
+  .glass-grid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media(max-width:576px){
+  .glass-grid{
+    grid-template-columns:repeat(1, 1fr);
+  }
+}
+
+/* Card */
+.glass-card{
+  position:relative;
+  padding:45px 25px 35px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.4);
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  text-align:center;
+  transition:0.5s;
+  overflow:hidden;
+}
+
+/* Gradient border */
+.glass-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:18px;
+  padding:2px;
+  background:linear-gradient(120deg,var(--primary),var(--secondary));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+  opacity:0;
+  transition:0.4s;
+}
+
+.glass-card:hover::before{
+  opacity:1;
+}
+
+.glass-card:hover{
+  transform:translateY(-14px) scale(1.02);
+  box-shadow:0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* Icon */
+.float-icon{
+  width:64px;
+  height:64px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:24px;
+  box-shadow:0 8px 25px var(--rgba-primary-4);
+  animation:float 3.5s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{ transform:translateY(0); }
+  50%{ transform:translateY(-8px); }
+}
+
+.glass-card h4{
+  font-size:19px;
+  font-weight:700;
+  margin-bottom:10px;
+  color:var(--dark-text);
+}
+
+.glass-card p{
+  font-size:14.5px;
+  color:var(--muted-text);
+  line-height:1.7;
+}
+
+/* China highlight */
+.glass-card.china{
+  background:linear-gradient(135deg,
+    var(--rgba-primary-1),
+    var(--rgba-secondary-1)
+  );
+}
+
+.glass-card.china .float-icon{
+  background:linear-gradient(135deg,var(--secondary),var(--primary));
+  box-shadow:0 8px 30px var(--rgba-secondary-4);
+}
+
+.glass-card.china h4{
+  color:var(--primary);
+}
+
+/* Responsive spacing */
+@media(max-width:768px){
+  .glass-card{
+    padding:35px 20px 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="why-glass">
+  <div class="container">
+
+    <div class="section-head">
+      <h5 class="sub-title">Why Choose Us</h5>
+      <h2 class="title">Our Execution Excellence Model</h2>
+      <p class="desc">Smart systems, global collaboration, and structured execution for world-class industrial solutions.</p>
+    </div>
+
+    <div class="glass-grid">
+
+      <div class="glass-card">
+        <span class="float-icon"><i class="fas fa-file-signature"></i></span>
+        <h4>Quotation</h4>
+        <p>Accurate pricing, transparent costing, and clear technical proposals.</p>
+      </div>
+
+      <div class="glass-card">
+        <span class="float-icon"><i class="fas fa-location-crosshairs"></i></span>
+        <h4>Site Visit</h4>
+        <p>Professional inspections for perfect project planning.</p>
+      </div>
+
+      <div class="glass-card">
+        <span class="float-icon"><i class="fas fa-diagram-project"></i></span>
+        <h4>Process</h4>
+        <p>Design → Manufacturing → Installation → Delivery workflow.</p>
+      </div>
+
+      <div class="glass-card">
+        <span class="float-icon"><i class="fas fa-list-check"></i></span>
+        <h4>Requirements</h4>
+        <p>Client-specific solutions with custom industrial engineering.</p>
+      </div>
+
+      <div class="glass-card china">
+        <span class="float-icon"><i class="fas fa-globe"></i></span>
+        <h4>China Collaboration</h4>
+        <p>Strategic sourcing & global manufacturing partnerships.</p>
+      </div>
+
+      <div class="glass-card">
+        <span class="float-icon"><i class="fas fa-shield-halved"></i></span>
+        <h4>Quality Assurance</h4>
+        <p>Strict quality checks, certifications, and compliance standards.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
 
 
 
