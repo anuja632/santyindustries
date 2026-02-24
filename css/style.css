@@ -172,6 +172,108 @@ html, body {
     --font-family2: 'Teko', sans-serif;
 }
 
+
+
+/* ================= MOBILE CANVAS ================= */
+
+.offcanvas-menu{
+  position: fixed;
+  top: 0;
+  left: -320px;
+  width: 300px;
+  height: 100vh;
+  background: linear-gradient(180deg,#081a2f,#0c2d4f);
+  z-index: 9999;
+  transition: 0.4s ease;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.offcanvas-menu.active{
+  left: 0;
+}
+
+/* Overlay */
+.canvas-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.canvas-overlay.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Header */
+.canvas-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.canvas-logo{
+  width:140px;
+}
+
+.canvas-close{
+  font-size:30px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* Links */
+.canvas-links{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.canvas-links li{
+  margin-bottom:10px;
+}
+
+.canvas-links a,
+.canvas-links span{
+  color:#fff;
+  text-decoration:none;
+  font-size:16px;
+  display:block;
+  padding:10px 0;
+  cursor:pointer;
+  font-weight:500;
+}
+
+/* Dropdown */
+.canvas-dropdown{
+  display:none;
+  padding-left:15px;
+  border-left:2px solid rgba(255,255,255,0.2);
+  margin-left:5px;
+}
+
+.has-dropdown.active .canvas-dropdown{
+  display:block;
+}
+
+.canvas-dropdown a{
+  font-size:14px;
+  color:#ddd;
+}
+
+/* ================= MEDIA QUERY ================= */
+
+@media (max-width: 991px){
+  .navbar-collapse{
+    display:none !important;
+  }
+}
+
 .DZ-theme-btn svg,.DZ-theme-btn,.DZ-theme-btn.DZ-bt-support-now,.DZ-theme-btn.DZ-bt-buy-now{
   display: none !important;
 }
@@ -36354,7 +36456,7 @@ transform: scaleX(-1);
 
 /* ===== ANIMATION ===== */
 .cr-animate{
-  opacity:0;
+  opacity:1;
   transform:translateY(30px);
   transition:0.8s ease;
 }

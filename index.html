@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="vendor/rangeslider/rangeslider.css">
 	<link rel="stylesheet" class="skin" href="css/skin/skin-3.css">
+  <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
 	
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -131,10 +132,10 @@
     <nav class="navbar navbar-expand-lg navbar-area">
       <div class="container">
     
-        <!-- TOGGLER -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+       <!-- TOGGLER -->
+<button class="navbar-toggler" type="button" id="canvasToggle">
+  <span class="navbar-toggler-icon"></span>
+</button>
     
         <!-- MENU -->
         <div class="collapse navbar-collapse" id="mainNavbar">
@@ -258,6 +259,53 @@
     </nav>
 </div>
 
+
+<!-- ================= MOBILE CANVAS ================= -->
+
+<div class="offcanvas-menu" id="mobileCanvas">
+
+<div class="canvas-header">
+  <img src="./images/logo.jpeg" class="canvas-logo">
+  <span class="canvas-close" id="closesCanvas">&times;</span>
+</div>
+
+<ul class="canvas-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li class="has-dropdown">
+  <span>Services</span>
+  <ul class="canvas-dropdown">
+    <li><a href="services.html">All Services</a></li>
+    <li><a href="conveyor-process.html">Conveyor Process</a></li>
+    <li><a href="clean-booth.html">Clean Booth</a></li>
+    <li><a href="clean-room.html">Clean Room</a></li>
+    <li><a href="facility-management.html">Facility Management</a></li>
+  </ul>
+</li>
+
+<li class="has-dropdown">
+  <span>Products</span>
+  <ul class="canvas-dropdown">
+    <li><a href="conveyor-products.html">Conveyor Systems</a></li>
+    <li><a href="clean-booth-products.html">Clean Booth</a></li>
+    <li><a href="clean-room-products.html">Clean Room</a></li>
+    <li><a href="filters.html">Facility Management</a></li>
+    <li><a href="esd-products.html">ESD Products</a></li>
+  </ul>
+</li>
+
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="clients.html">Clients</a></li>
+<li><a href="about-us.html">About</a></li>
+<li><a href="contact-us.html">Contact</a></li>
+
+</ul>
+</div>
+
+<div class="canvas-overlay" id="canvasOverlay"></div>
+
+<!-- ================= JS ================= -->
 
 
 
@@ -1393,7 +1441,6 @@
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
 <script src="vendor/lightgallery/js/lightgallery-all.min.js"></script><!-- LIGHTGALLERY -->
 <script src="vendor/magnific-popup/magnific-popup.js"></script>
-<script src="vendor/magnific-popup/magnific-popup.min.css"></script>
 <script>
   /* Scroll To Top ============ */
 var scrollTop = function () {
@@ -1461,6 +1508,35 @@ window.addEventListener("load", function(){
   setTimeout(() => {
     loader.style.display = "none";
   }, 600);
+});
+</script>
+<script>
+const toggler = document.getElementById('canvasToggle');
+const canvas = document.getElementById('mobileCanvas');
+const overlay = document.getElementById('canvasOverlay');
+const closeBtn = document.getElementById('closesCanvas'); // ✅ fixed id
+
+/* Open Canvas */
+toggler.addEventListener('click', () => {
+  canvas.classList.add('active');
+  overlay.classList.add('active');
+});
+
+/* Close Canvas */
+function closeCanvas(){
+  canvas.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+/* Close events */
+closeBtn.addEventListener('click', closeCanvas);   // ✅ correct variable
+overlay.addEventListener('click', closeCanvas);
+
+/* Dropdown Toggle */
+document.querySelectorAll('.has-dropdown > span').forEach(item=>{
+  item.addEventListener('click', ()=>{
+    item.parentElement.classList.toggle('active');
+  });
 });
 </script>
 
