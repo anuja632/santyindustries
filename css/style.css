@@ -930,8 +930,13 @@ a {
   font-size: 16px;
   top: 0;
 }
-.logo-main{
-  height: 250px;
+.logo-main {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+.vids{
+  height:450px !important ;
 }
 p{
   text-align: justify;
