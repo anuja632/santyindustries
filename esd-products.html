@@ -254,7 +254,52 @@
     </nav>
 </div>
 
+<!-- ================= MOBILE CANVAS ================= -->
 
+<div class="offcanvas-menu" id="mobileCanvas">
+
+<div class="canvas-header">
+  <img src="./images/logo.jpeg" class="canvas-logo">
+  <span class="canvas-close" id="closesCanvas">&times;</span>
+</div>
+
+<ul class="canvas-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li class="has-dropdown">
+  <span>Services</span>
+  <ul class="canvas-dropdown">
+    <li><a href="services.html">All Services</a></li>
+    <li><a href="conveyor-process.html">Conveyor Process</a></li>
+    <li><a href="clean-booth.html">Clean Booth</a></li>
+    <li><a href="clean-room.html">Clean Room</a></li>
+    <li><a href="facility-management.html">Facility Management</a></li>
+  </ul>
+</li>
+
+<li class="has-dropdown">
+  <span>Products</span>
+  <ul class="canvas-dropdown">
+    <li><a href="conveyor-products.html">Conveyor Systems</a></li>
+    <li><a href="clean-booth-products.html">Clean Booth</a></li>
+    <li><a href="clean-room-products.html">Clean Room</a></li>
+    <li><a href="filters.html">Facility Management</a></li>
+    <li><a href="esd-products.html">ESD Products</a></li>
+  </ul>
+</li>
+
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="clients.html">Clients</a></li>
+<li><a href="about-us.html">About</a></li>
+<li><a href="contact-us.html">Contact</a></li>
+
+</ul>
+</div>
+
+<div class="canvas-overlay" id="canvasOverlay"></div>
+
+<!-- ================= JS ================= -->
 
 	</div>
     		<!-- Banner  -->
@@ -758,6 +803,43 @@ window.addEventListener("load", function(){
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const toggler = document.getElementById('canvasToggle');
+  const canvas  = document.getElementById('mobileCanvas');
+  const overlay = document.getElementById('canvasOverlay');
+  const closeBtn = document.getElementById('closesCanvas');
+
+  if(!toggler || !canvas || !overlay || !closeBtn){
+    console.log("Canvas elements missing");
+    return;
+  }
+
+  /* Open Canvas */
+  toggler.addEventListener('click', function () {
+    canvas.classList.add('active');
+    overlay.classList.add('active');
+  });
+
+  /* Close Canvas */
+  function closeCanvas(){
+    canvas.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  closeBtn.addEventListener('click', closeCanvas);
+  overlay.addEventListener('click', closeCanvas);
+
+  /* Dropdown Toggle */
+  document.querySelectorAll('.has-dropdown > span').forEach(item=>{
+    item.addEventListener('click', function(){
+      this.parentElement.classList.toggle('active');
+    });
+  });
+
+});
+</script>
 <script src="js/dz.carousel.js"></script><!-- OWL CAROUSEL -->
 <script src="js/custom.js"></script><!-- CUSTOM JS -->
 <script src="vendor/rangeslider/rangeslider.js"></script><!-- RANGESLIDER -->

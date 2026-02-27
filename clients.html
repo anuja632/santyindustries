@@ -127,16 +127,16 @@
     <nav class="navbar navbar-expand-lg navbar-area">
       <div class="container">
     
-        <!-- TOGGLER -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+       <!-- TOGGLER -->
+<button class="navbar-toggler" type="button" id="canvasToggle">
+  <span class="navbar-toggler-icon"></span>
+</button>
     
         <!-- MENU -->
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav me-auto nav-menu">
     
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="index.html">home</a>
             </li>
     
@@ -238,7 +238,7 @@
 
     
             <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="clients.html">clients</a></li>
+            <li class="nav-item"><a class="nav-link active" href="clients.html">clients</a></li>
             <li class="nav-item"><a class="nav-link" href="about-us.html">about</a></li>
             <!-- <li class="nav-item"><a class="nav-link" href="blog.html">blog</a></li> -->
     
@@ -260,7 +260,7 @@
 	<div class="page-content bg-white">
 		
 		<!-- Banner  -->
-		<div class="dz-bnr-inr dz-bnr-inr-sm overlay-black-middle text-center" style="background-image: url(images/bnr/bnr1.jpg);">
+		<div class="dz-bnr-inr dz-bnr-inr-sm overlay-black-middle text-center" style="background-image: url(images/bnr/bnr9.jpg);">
 			<div class="container">
 				<div class="dz-bnr-inr-entry">
 					<h1>Clients</h1>
@@ -320,11 +320,11 @@
 				<h5>Tata Electronics Products and Solutions (Jasmine Plant ).</h5>
 			</div>
       
-<div class="col-lg-6 col-md-6 m-b30 text-center">
+<!-- <div class="col-lg-6 col-md-6 m-b30 text-center">
 				<img src="images/work/work7.jpg" class="img-fluid work m-b15" alt="" loading="lazy">
 				<h5>Tata Electronics Private Limited (MG plant)</h5>
 			</div>
-      
+       -->
 <div class="col-lg-6 col-md-6 m-b30 text-center">
 				<img src="images/work/work8.jpg" class="img-fluid work m-b15" alt="" loading="lazy">
 				<h5>Pegatron Electronics India Private limited at Poonamalle Bypass Road , Chennai
@@ -444,7 +444,7 @@
 										<p>Mon-Sat: 9am- 6pm</p>
 									</li>
 								</ul>
-								<a  id="openEnquiry" class="btn btn-white enquiry-btn sechedule-btn">Schedule Installation</a>
+								<a href="contact-us.html" class="btn btn-white enquiry-btn sechedule-btn">Schedule Installation</a>
 							</div>
 						</div>
 					</div>
@@ -453,75 +453,7 @@
             </div>
 
         </div>
-<!-- MODAL -->
-<div class="enquiry-modal" id="enquiryModal">
 
-  <div class="enquiry-box">
-
-    <span class="close-btn" id="closeEnquiry">&times;</span>
-
-    <div class="enquiry-flex">
-
-      <!-- IMAGE -->
-      <div class="enquiry-image">
-        <img src="images/enquiry.jpg" alt="Enquiry">
-      </div>
-
-      <!-- FORM -->
-      <div class="enquiry-form">
-        <h2>Quick Enquiry</h2>
-        <form action="https://formsubmit.co/santyequipment@gmail.com" method="POST">
-
-  <!-- Hidden config -->
-  <input type="hidden" name="_cc" value="sales@santyindia.com">
-  <input type="hidden" name="_subject" value="New Enquiry from Website">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
-  <input type="hidden" name="_captcha" value="false">
-
-   <!-- Name -->
-  <div class="input-group">
-    <i class="fas fa-user"></i>
-    <input type="text" name="name" placeholder="Your Name" required>
-  </div>
-
-  <!-- Email -->
-  <div class="input-group">
-    <i class="fas fa-envelope"></i>
-    <input type="email" name="email" placeholder="Email Address" required>
-  </div>
-
-  <!-- Phone -->
-  <div class="input-group">
-    <i class="fas fa-phone-alt"></i>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-  </div>
-
-  <!-- Services -->
-  <div class="input-group">
-    <i class="fas fa-briefcase"></i>
-    <select name="service" required>
-       <option value="" disabled="" selected="">Select a Service</option>
-                    <option value="Clean Room">Clean Room</option>
-                    <option value="Clean Booth">Clean Booth</option>
-                    <option value="Conveyor Process">Conveyor Process</option>
-                    <option value="Facility Management">Facility Management</option>
-    </select>
-  </div>
-
-  <!-- Message -->
-  <div class="input-group textarea-group">
-    <i class="fas fa-comment"></i>
-    <textarea name="message" rows="2" placeholder="Message"></textarea>
-  </div>
-
-  <button type="submit">Send Enquiry</button>
-</form>
-      </div>
-
-    </div>
-  </div>
-</div>
 
 
 
@@ -669,6 +601,43 @@ window.addEventListener("load", function(){
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const toggler = document.getElementById('canvasToggle');
+  const canvas  = document.getElementById('mobileCanvas');
+  const overlay = document.getElementById('canvasOverlay');
+  const closeBtn = document.getElementById('closesCanvas');
+
+  if(!toggler || !canvas || !overlay || !closeBtn){
+    console.log("Canvas elements missing");
+    return;
+  }
+
+  /* Open Canvas */
+  toggler.addEventListener('click', function () {
+    canvas.classList.add('active');
+    overlay.classList.add('active');
+  });
+
+  /* Close Canvas */
+  function closeCanvas(){
+    canvas.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  closeBtn.addEventListener('click', closeCanvas);
+  overlay.addEventListener('click', closeCanvas);
+
+  /* Dropdown Toggle */
+  document.querySelectorAll('.has-dropdown > span').forEach(item=>{
+    item.addEventListener('click', function(){
+      this.parentElement.classList.toggle('active');
+    });
+  });
+
+});
+</script>
 <script src="js/dz.carousel.js"></script><!-- OWL CAROUSEL -->
 <script src="js/custom.js"></script><!-- CUSTOM JS -->
 <script src="vendor/rangeslider/rangeslider.js"></script><!-- RANGESLIDER -->

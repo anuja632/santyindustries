@@ -2,6 +2,8 @@
 /**
 Core script to handle the entire theme and core functions
 **/
+
+
 var Indiro = function () {
 	'use strict';
 
@@ -354,23 +356,23 @@ var scrollTop = function () {
 		$(".full-height").css("height", $(window).height());
 	}
 
-	/* BGEFFECT ============ */
-	var reposition = function () {
-		var modal = jQuery(this),
-			dialog = modal.find('.modal-dialog');
-		modal.css('display', 'block');
+	// /* BGEFFECT ============ */
+	// var reposition = function () {
+	// 	var modal = jQuery(this),
+	// 		dialog = modal.find('.modal-dialog');
+	// 	modal.css('display', 'block');
 
-		/* Dividing by two centers the modal exactly, but dividing by three 
-		 or four works better for larger screens.  */
-		dialog.css("margin-top", Math.max(0, (jQuery(window).height() - dialog.height()) / 2));
-	}
+	// 	/* Dividing by two centers the modal exactly, but dividing by three 
+	// 	 or four works better for larger screens.  */
+	// 	dialog.css("margin-top", Math.max(0, (jQuery(window).height() - dialog.height()) / 2));
+	// }
 
-	var handelResize = function () {
-		/* Reposition when the window is resized */
-		jQuery(window).on('resize', function () {
-			jQuery('.modal:visible').each(reposition);
-		});
-	}
+	// var handelResize = function () {
+	// 	/* Reposition when the window is resized */
+	// 	jQuery(window).on('resize', function () {
+	// 		jQuery('.modal:visible').each(reposition);
+	// 	});
+	// }
 
 	/* Countdown ============ */
 	var handleCountDown = function (WebsiteLaunchDate) {
@@ -916,6 +918,20 @@ jQuery(window).on('load', function () {
 		jQuery('#loading-area').addClass('active');
 		jQuery('#loading-area').fadeOut(1000);
 	}, 1000);
+	var splitSwiper = new Swiper(".splitImageCarousel", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  speed: 700,
+  pagination: {
+    el: ".splitImageCarousel .swiper-pagination",
+    clickable: true,
+  }
+});
 
 });
 /*  Window Load END */
@@ -925,3 +941,6 @@ jQuery(window).on('resize', function () {
 	Indiro.resize();
 });
 /*  Window Resize END */
+
+
+

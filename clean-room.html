@@ -127,16 +127,16 @@
     <nav class="navbar navbar-expand-lg navbar-area">
       <div class="container">
     
-        <!-- TOGGLER -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+       <!-- TOGGLER -->
+<button class="navbar-toggler" type="button" id="canvasToggle">
+  <span class="navbar-toggler-icon"></span>
+</button>
     
         <!-- MENU -->
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav me-auto nav-menu">
     
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="index.html">home</a>
             </li>
     
@@ -145,7 +145,7 @@
 <li class="nav-item dropdown d-flex align-items-center">
 
   <!-- Main link -->
-  <a class="nav-link" href="services.html">
+  <a class="nav-link active" href="services.html">
     services
   </a>
 
@@ -472,7 +472,7 @@ Partition of Rock wool panel
 						</div>
 						<div class="swiper-slide" role="group" aria-label="7 / 18" style="width: 169.833px; margin-right: 30px;" data-swiper-slide-index="0">
 							<div class="clients-logo aos-item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
-								<img class="logo-main" src="images/gallery/gallery1.jpg" alt="">
+								<img class="logo-main" src="images/gallery/gallery7.jpeg" alt="">
 							</div>
 						</div>	
 						<div class="swiper-slide" role="group" aria-label="8 / 18" style="width: 169.833px; margin-right: 30px;" data-swiper-slide-index="1">
@@ -502,7 +502,7 @@ Partition of Rock wool panel
 						</div>	
 					<div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="7 / 18" style="width: 169.833px; margin-right: 30px;" data-swiper-slide-index="0">
 							<div class="clients-logo aos-item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800" data-aos-delay="100">
-								<img class="logo-main" src="images/gallery/gallery1.jpg" alt="">
+								<img class="logo-main" src="images/gallery/gallery8.JPG" alt="">
 							</div>
 						</div><div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="8 / 18" style="width: 169.833px; margin-right: 30px;" data-swiper-slide-index="1">
 							<div class="clients-logo aos-item aos-init aos-animate" data-aos="fade-in" data-aos-duration="800" data-aos-delay="200">
@@ -850,5 +850,42 @@ window.addEventListener("load", function(){
 <script src="js/dz.carousel.js"></script><!-- OWL CAROUSEL -->
 <script src="js/custom.js"></script><!-- CUSTOM JS -->
 <script src="vendor/rangeslider/rangeslider.js"></script><!-- RANGESLIDER -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const toggler = document.getElementById('canvasToggle');
+  const canvas  = document.getElementById('mobileCanvas');
+  const overlay = document.getElementById('canvasOverlay');
+  const closeBtn = document.getElementById('closesCanvas');
+
+  if(!toggler || !canvas || !overlay || !closeBtn){
+    console.log("Canvas elements missing");
+    return;
+  }
+
+  /* Open Canvas */
+  toggler.addEventListener('click', function () {
+    canvas.classList.add('active');
+    overlay.classList.add('active');
+  });
+
+  /* Close Canvas */
+  function closeCanvas(){
+    canvas.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  closeBtn.addEventListener('click', closeCanvas);
+  overlay.addEventListener('click', closeCanvas);
+
+  /* Dropdown Toggle */
+  document.querySelectorAll('.has-dropdown > span').forEach(item=>{
+    item.addEventListener('click', function(){
+      this.parentElement.classList.toggle('active');
+    });
+  });
+
+});
+</script>
 </body>
 </html>

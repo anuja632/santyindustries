@@ -1279,12 +1279,20 @@
 							<div class="info-right">
 								<ul class="service-info">
 									<li>
-										<h4 class="title">EMAIL US</h4>
+                  <div class="d-flex align-items-center">
+<i class="flaticon-message" style="color: #fff;"></i>
+  <h4 class="title ms-2">EMAIL US</h4>
+</div>
+										
 										<p>santyequipment@gmail.com,<br>sales@santyindia.com</p>
 									</li>
 									<li>
-										<h4 class="title">OPENING HOURS</h4>
-										<p>Mon-Sat: 9am- 6pm</p>
+                    <div class="d-flex align-items-center">
+
+                      <i class="flaticon-alarm-clock" style="color: white;"></i><h4 class="title ms-2">OPENING HOURS</h4>
+                    </div>
+                    <p>Monday to Saturday: 
+                      <br>9am- 6pm</p>
 									</li>
 								</ul>
 								<a  id="openEnquiry" class="btn btn-white enquiry-btn sechedule-btn">Schedule Installation</a>
@@ -1296,7 +1304,7 @@
             </div>
 
         </div>
-<!-- MODAL -->
+
 <div class="enquiry-modal" id="enquiryModal">
 
   <div class="enquiry-box">
@@ -1365,7 +1373,6 @@
     </div>
   </div>
 </div>
-
 
 
 
@@ -1511,32 +1518,40 @@ window.addEventListener("load", function(){
 });
 </script>
 <script>
-const toggler = document.getElementById('canvasToggle');
-const canvas = document.getElementById('mobileCanvas');
-const overlay = document.getElementById('canvasOverlay');
-const closeBtn = document.getElementById('closesCanvas'); // ✅ fixed id
+document.addEventListener("DOMContentLoaded", function () {
 
-/* Open Canvas */
-toggler.addEventListener('click', () => {
-  canvas.classList.add('active');
-  overlay.classList.add('active');
-});
+  const toggler = document.getElementById('canvasToggle');
+  const canvas  = document.getElementById('mobileCanvas');
+  const overlay = document.getElementById('canvasOverlay');
+  const closeBtn = document.getElementById('closesCanvas');
 
-/* Close Canvas */
-function closeCanvas(){
-  canvas.classList.remove('active');
-  overlay.classList.remove('active');
-}
+  if(!toggler || !canvas || !overlay || !closeBtn){
+    console.log("Canvas elements missing");
+    return;
+  }
 
-/* Close events */
-closeBtn.addEventListener('click', closeCanvas);   // ✅ correct variable
-overlay.addEventListener('click', closeCanvas);
-
-/* Dropdown Toggle */
-document.querySelectorAll('.has-dropdown > span').forEach(item=>{
-  item.addEventListener('click', ()=>{
-    item.parentElement.classList.toggle('active');
+  /* Open Canvas */
+  toggler.addEventListener('click', function () {
+    canvas.classList.add('active');
+    overlay.classList.add('active');
   });
+
+  /* Close Canvas */
+  function closeCanvas(){
+    canvas.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  closeBtn.addEventListener('click', closeCanvas);
+  overlay.addEventListener('click', closeCanvas);
+
+  /* Dropdown Toggle */
+  document.querySelectorAll('.has-dropdown > span').forEach(item=>{
+    item.addEventListener('click', function(){
+      this.parentElement.classList.toggle('active');
+    });
+  });
+
 });
 </script>
 

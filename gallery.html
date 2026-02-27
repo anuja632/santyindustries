@@ -127,16 +127,16 @@
     <nav class="navbar navbar-expand-lg navbar-area">
       <div class="container">
     
-        <!-- TOGGLER -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+       <!-- TOGGLER -->
+<button class="navbar-toggler" type="button" id="canvasToggle">
+  <span class="navbar-toggler-icon"></span>
+</button>
     
         <!-- MENU -->
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav me-auto nav-menu">
     
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="index.html">home</a>
             </li>
     
@@ -237,7 +237,7 @@
 </li>
 
     
-            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="clients.html">clients</a></li>
             <li class="nav-item"><a class="nav-link" href="about-us.html">about</a></li>
             <!-- <li class="nav-item"><a class="nav-link" href="blog.html">blog</a></li> -->
@@ -253,6 +253,53 @@
       </div>
     </nav>
 </div>
+
+<!-- ================= MOBILE CANVAS ================= -->
+
+<div class="offcanvas-menu" id="mobileCanvas">
+
+<div class="canvas-header">
+  <img src="./images/logo.jpeg" class="canvas-logo">
+  <span class="canvas-close" id="closesCanvas">&times;</span>
+</div>
+
+<ul class="canvas-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li class="has-dropdown">
+  <span>Services</span>
+  <ul class="canvas-dropdown">
+    <li><a href="services.html">All Services</a></li>
+    <li><a href="conveyor-process.html">Conveyor Process</a></li>
+    <li><a href="clean-booth.html">Clean Booth</a></li>
+    <li><a href="clean-room.html">Clean Room</a></li>
+    <li><a href="facility-management.html">Facility Management</a></li>
+  </ul>
+</li>
+
+<li class="has-dropdown">
+  <span>Products</span>
+  <ul class="canvas-dropdown">
+    <li><a href="conveyor-products.html">Conveyor Systems</a></li>
+    <li><a href="clean-booth-products.html">Clean Booth</a></li>
+    <li><a href="clean-room-products.html">Clean Room</a></li>
+    <li><a href="filters.html">Facility Management</a></li>
+    <li><a href="esd-products.html">ESD Products</a></li>
+  </ul>
+</li>
+
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="clients.html">Clients</a></li>
+<li><a href="about-us.html">About</a></li>
+<li><a href="contact-us.html">Contact</a></li>
+
+</ul>
+</div>
+
+<div class="canvas-overlay" id="canvasOverlay"></div>
+
+<!-- ================= JS ================= -->
     		<!-- Banner  -->
 		<div class="dz-bnr-inr dz-bnr-inr-sm overlay-black-middle text-center" style="background-image: url(images/bnr/bnr1.jpg);">
 			<div class="container">
@@ -287,7 +334,7 @@
         <!-- Tools -->
     <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
       <div class="gallery-card">
-        <img src="images/gallery/COMPANY OUTLET.JPG" alt="Industrial Tools"  loading="lazy">
+        <img src="images/gallery/COMPANY OUTLET.png" alt="Industrial Tools"  loading="lazy">
         <div class="gallery-overlay">
       
         </div>
@@ -307,7 +354,7 @@
     <!-- Clean Booth -->
     <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
       <div class="gallery-card">
-        <img src="images/gallery/galtwo.JPG" alt="Clean Booth"  loading="lazy">
+        <img src="images/gallery/conone.jpeg" alt="Clean Booth"  loading="lazy">
         <div class="gallery-overlay">
         
         </div>
@@ -317,7 +364,7 @@
     <!-- Clean Room -->
     <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
       <div class="gallery-card">
-        <img src="images/gallery/galthree.JPG" alt="Clean Room"  loading="lazy">
+        <img src="images/gallery/confive.jpeg" alt="Clean Room"  loading="lazy">
         <div class="gallery-overlay">
         
         </div>
@@ -327,7 +374,7 @@
     <!-- ESD -->
     <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
       <div class="gallery-card">
-        <img src="images/gallery/galfour.JPG" alt="ESD Products"  loading="lazy">
+        <img src="images/gallery/confour.jpeg" alt="ESD Products"  loading="lazy">
         <div class="gallery-overlay">
           
         </div>
@@ -364,7 +411,45 @@
       </div>
     </div>
 
+    <!-- Facility -->
+    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+      <div class="gallery-card">
+        <img src="images/gallery/galfive.JPG" alt="Facility Management"  loading="lazy">
+        <div class="gallery-overlay">
+          
+        </div>
+      </div>
+    </div>
 
+    <!-- Machines -->
+    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+      <div class="gallery-card">
+        <img src="images/gallery/conthree.jpeg" alt="Industrial Machines"  loading="lazy">
+        <div class="gallery-overlay">
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- Fabrication -->
+    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+      <div class="gallery-card">
+        <img src="images/gallery/contwo.jpeg" alt="Fabrication"  loading="lazy">
+        <div class="gallery-overlay">
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- Fabrication -->
+    <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+      <div class="gallery-card">
+        <img src="images/gallery/consix.jpeg" alt="Fabrication"  loading="lazy">
+        <div class="gallery-overlay">
+        
+        </div>
+      </div>
+    </div>
 
   </div>
 
@@ -468,7 +553,7 @@
 										<p>Mon-Sat: 9am- 6pm</p>
 									</li>
 								</ul>
-								<a  id="openEnquiry" class="btn btn-white enquiry-btn sechedule-btn">Schedule Installation</a>
+								<a  href="contact-us.html" class="btn btn-white enquiry-btn sechedule-btn">Schedule Installation</a>
 							</div>
 						</div>
 					</div>
@@ -477,75 +562,7 @@
             </div>
 
         </div>
-<!-- MODAL -->
-<div class="enquiry-modal" id="enquiryModal">
 
-  <div class="enquiry-box">
-
-    <span class="close-btn" id="closeEnquiry">&times;</span>
-
-    <div class="enquiry-flex">
-
-      <!-- IMAGE -->
-      <div class="enquiry-image">
-        <img src="images/enquiry.jpg" alt="Enquiry">
-      </div>
-
-      <!-- FORM -->
-      <div class="enquiry-form">
-        <h2>Quick Enquiry</h2>
-        <form action="https://formsubmit.co/santyequipment@gmail.com" method="POST">
-
-  <!-- Hidden config -->
-  <input type="hidden" name="_cc" value="sales@santyindia.com">
-  <input type="hidden" name="_subject" value="New Enquiry from Website">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
-  <input type="hidden" name="_captcha" value="false">
-
-   <!-- Name -->
-  <div class="input-group">
-    <i class="fas fa-user"></i>
-    <input type="text" name="name" placeholder="Your Name" required>
-  </div>
-
-  <!-- Email -->
-  <div class="input-group">
-    <i class="fas fa-envelope"></i>
-    <input type="email" name="email" placeholder="Email Address" required>
-  </div>
-
-  <!-- Phone -->
-  <div class="input-group">
-    <i class="fas fa-phone-alt"></i>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-  </div>
-
-  <!-- Services -->
-  <div class="input-group">
-    <i class="fas fa-briefcase"></i>
-    <select name="service" required>
-       <option value="" disabled="" selected="">Select a Service</option>
-                    <option value="Clean Room">Clean Room</option>
-                    <option value="Clean Booth">Clean Booth</option>
-                    <option value="Conveyor Process">Conveyor Process</option>
-                    <option value="Facility Management">Facility Management</option>
-    </select>
-  </div>
-
-  <!-- Message -->
-  <div class="input-group textarea-group">
-    <i class="fas fa-comment"></i>
-    <textarea name="message" rows="2" placeholder="Message"></textarea>
-  </div>
-
-  <button type="submit">Send Enquiry</button>
-</form>
-      </div>
-
-    </div>
-  </div>
-</div>
 
 
 
@@ -615,14 +632,19 @@
 <!-- JAVASCRIPT FILES ========================================= -->
 <!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
 <script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script><!-- BOOTSTRAP.MIN JS -->
 <script src="vendor/lightgallery/js/lightgallery-all.min.js"></script><!-- LIGHTGALLERY -->
 <script src="vendor/magnific-popup/magnific-popup.js"></script>
 <script src="vendor/magnific-popup/magnific-popup.min.css"></script>
+<script src="vendor/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+<script src="vendor/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+<script src="vendor/swiper/swiper-bundle.min.js"></script><!-- OWL-CAROUSEL -->
+<script src="vendor/aos/aos.js"></script><!-- AOS -->
+<script src="js/modal.js"></script>
+<script src="js/dz.carousel.js"></script><!-- OWL CAROUSEL -->
+<script src="js/custom.js"></script><!-- CUSTOM JS -->
+<script src="vendor/rangeslider/rangeslider.js"></script><!-- RANGESLIDER -->
 <script>
   /* Scroll To Top ============ */
 var scrollTop = function () {
@@ -659,10 +681,7 @@ var scrollTop = function () {
     });
 }
 </script>
-<script src="vendor/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
-<script src="vendor/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
-<script src="vendor/swiper/swiper-bundle.min.js"></script><!-- OWL-CAROUSEL -->
-<script src="vendor/aos/aos.js"></script><!-- AOS -->
+
 <script>
 const modal = document.getElementById("enquiryModal");
 const openBtn = document.getElementById("openEnquiry");
@@ -693,8 +712,6 @@ window.addEventListener("load", function(){
 });
 </script>
 
-<script src="js/dz.carousel.js"></script><!-- OWL CAROUSEL -->
-<script src="js/custom.js"></script><!-- CUSTOM JS -->
-<script src="vendor/rangeslider/rangeslider.js"></script><!-- RANGESLIDER -->
+
 </body>
 </html>

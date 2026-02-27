@@ -136,7 +136,7 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav me-auto nav-menu">
     
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="index.html">home</a>
             </li>
     
@@ -145,7 +145,7 @@
 <li class="nav-item dropdown d-flex align-items-center">
 
   <!-- Main link -->
-  <a class="nav-link" href="services.html">
+  <a class="nav-link active" href="services.html">
     services
   </a>
 
@@ -332,7 +332,7 @@
                   </div>
                 
                   <div class="card">
-                    <img src="images/services/inclinedbelt.png" alt="Inclined Belt Conveyor">
+                    <img src="images/services/inclinedbelt (2).png" alt="Inclined Belt Conveyor">
                     <div class="card-content">
                       <div class="title-row">
                         <div class="orange-line"></div>
@@ -493,8 +493,8 @@
     
 			<div class="container">
                     <div class="section-head style-1 text-center aos-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                    <h5 class="sub-title text-primary">Clean Booth Solutions</h5>
-<h2 class="title m-b20">PRECISION CLEAN BOOTH WORKS</h2>
+                    <h5 class="sub-title text-primary">Conveyor Process</h5>
+<h2 class="title m-b20">PRECISION CONVEYOR PROCESS WORKS</h2>
 
                 </div>
 				<div class="swiper-container clients-swiper swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
@@ -897,6 +897,43 @@ window.addEventListener("load", function(){
   setTimeout(() => {
     loader.style.display = "none";
   }, 600);
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const toggler = document.getElementById('canvasToggle');
+  const canvas  = document.getElementById('mobileCanvas');
+  const overlay = document.getElementById('canvasOverlay');
+  const closeBtn = document.getElementById('closesCanvas');
+
+  if(!toggler || !canvas || !overlay || !closeBtn){
+    console.log("Canvas elements missing");
+    return;
+  }
+
+  /* Open Canvas */
+  toggler.addEventListener('click', function () {
+    canvas.classList.add('active');
+    overlay.classList.add('active');
+  });
+
+  /* Close Canvas */
+  function closeCanvas(){
+    canvas.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  closeBtn.addEventListener('click', closeCanvas);
+  overlay.addEventListener('click', closeCanvas);
+
+  /* Dropdown Toggle */
+  document.querySelectorAll('.has-dropdown > span').forEach(item=>{
+    item.addEventListener('click', function(){
+      this.parentElement.classList.toggle('active');
+    });
+  });
+
 });
 </script>
 

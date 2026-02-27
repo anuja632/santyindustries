@@ -125,17 +125,15 @@
     <!-- ================= NAVBAR ================= -->
     <nav class="navbar navbar-expand-lg navbar-area">
       <div class="container">
-    
-        <!-- TOGGLER -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<button class="navbar-toggler" type="button" id="canvasToggle">
+  <span class="navbar-toggler-icon"></span>
+</button>
     
         <!-- MENU -->
         <div class="collapse navbar-collapse" id="mainNavbar">
           <ul class="navbar-nav me-auto nav-menu">
     
-            <li class="nav-item active">
+            <li class="nav-item ">
               <a class="nav-link" href="index.html">home</a>
             </li>
     
@@ -238,7 +236,7 @@
     
             <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="clients.html">clients</a></li>
-            <li class="nav-item"><a class="nav-link" href="about-us.html">about</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about-us.html">about</a></li>
             <!-- <li class="nav-item"><a class="nav-link" href="blog.html">blog</a></li> -->
     
           </ul>
@@ -254,6 +252,52 @@
 </div>
 
 
+<!-- ================= MOBILE CANVAS ================= -->
+
+<div class="offcanvas-menu" id="mobileCanvas">
+
+<div class="canvas-header">
+  <img src="./images/logo.jpeg" class="canvas-logo">
+  <span class="canvas-close" id="closesCanvas">&times;</span>
+</div>
+
+<ul class="canvas-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li class="has-dropdown">
+  <span>Services</span>
+  <ul class="canvas-dropdown">
+    <li><a href="services.html">All Services</a></li>
+    <li><a href="conveyor-process.html">Conveyor Process</a></li>
+    <li><a href="clean-booth.html">Clean Booth</a></li>
+    <li><a href="clean-room.html">Clean Room</a></li>
+    <li><a href="facility-management.html">Facility Management</a></li>
+  </ul>
+</li>
+
+<li class="has-dropdown">
+  <span>Products</span>
+  <ul class="canvas-dropdown">
+    <li><a href="conveyor-products.html">Conveyor Systems</a></li>
+    <li><a href="clean-booth-products.html">Clean Booth</a></li>
+    <li><a href="clean-room-products.html">Clean Room</a></li>
+    <li><a href="filters.html">Facility Management</a></li>
+    <li><a href="esd-products.html">ESD Products</a></li>
+  </ul>
+</li>
+
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="clients.html">Clients</a></li>
+<li><a href="about-us.html">About</a></li>
+<li><a href="contact-us.html">Contact</a></li>
+
+</ul>
+</div>
+
+<div class="canvas-overlay" id="canvasOverlay"></div>
+
+<!-- ================= JS ================= -->
 
 
 		<!-- Banner  -->
@@ -274,65 +318,57 @@
 			</div>
 		</div>
 		<!-- Banner End -->
-		<section class="content-inner bg-gray">
-    <div class="container">
-        <div class="row about-style11">
-            <!-- Left Media / Video -->
-            <div class="col-lg-7 m-b30 aos-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                <div class="dz-media ">    
-                    <img src="images/gallery/COMPANY OUTLET.JPG" alt="Santy Industries">
-                    <!-- <div class="video-btn">
-                        <a href="https://www.youtube.com/watch?v=_FRZVScwggM" class="popup-youtube play-btn6">
-                            <i class="fa fa-play"></i>
-                        </a>
-                        <p>Video Presentation</p>
-                    </div> -->
-                    <!-- <div class="exp-box">
-                        <h4 class="year">4+</h4>
-                        <span>Years of Experience</span>
-                    </div> -->
-                </div>
-            </div>
 
-            <!-- Right Content -->
-            <div class="col-lg-5 m-b30 align-self-center aos-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                <div class="about-content">
-                    <div class="section-head style-1">
-                        <h5 class="sub-title text-primary">About Us</h5>
+		<section class="content-inner bg-gray">
+			<div class="container">
+				<div class="row about-style8">
+										<div class="col-lg-6 m-b30">
+						<div class="dz-media">	
+						<div class="split-box split-active">
+  
+  <div class="swiper splitImageCarousel">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <img src="images/gallery/COMPANY OUTLET.png" alt="Santy Industries">
+      </div>
+	        <div class="swiper-slide">
+        <img src="images/gallery/galsix.JPG" alt="Santy Industries">
+      </div>
+	        <div class="swiper-slide">
+        <img src="images/gallery/CONFERENCES HALL.JPG" alt="Santy Industries">
+      </div>
+
+    </div>
+
+    <!-- dots -->
+    <div class="swiper-pagination mt-3"></div>
+  </div>
+
+</div>
+			
+<script>
+
+</script>
+						</div>
+					</div>
+					<div class="col-lg-6 m-b10 align-self-center aos-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+						<div class="about-content">
+							<div class="section-head style-1">
+								    <h5 class="sub-title text-primary">About Us</h5>
                         <h2 class="title m-b20"> Your Trusted Industrial Partner</h2>
                         <p>
                             We are a trusted provider of customized conveyor systems and clean booth solutions. With strong engineering expertise and a customer-first approach, we deliver reliable, efficient, and cost-effective systems tailored to your operational needs.
                         </p>
-                        
-                    </div>
-                    <a href="contact-us.html" class="btn btn-primary btn-border m-r10 m-b10">Contact Us</a>
-                </div>
-            </div>
-        </div>
+					</div>
+							<a href="about-us.html" class="btn btn-primary btn-border m-r10 m-b10">ABOUT US</a>
+						</div>
+					</div>
 
-        <!-- Key Highlights -->
-        <div class="row">
-            <div class="col-lg-4 m-b30 aos-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                <div class="check-box box-hover">
-                    <h4 class="title">4 Years of Experience</h4>
-                    <p>ISO 9001 Certified & Trusted</p>
-                </div>
-            </div>
-            <div class="col-lg-4 m-b30 aos-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                <div class="check-box box-hover active">
-                    <h4 class="title">24/7 Availability</h4>
-                    <p>Support anytime, any day</p>
-                </div>
-            </div>
-            <div class="col-lg-4 m-b30 aos-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-                <div class="check-box box-hover">
-                    <h4 class="title">No Obligation Quotes</h4>
-                    <p>Transparent & detailed reports</p>
-                </div>
-            </div>
-        </div>
-    </div>
-      </section>
+				</div>
+			</div>
+		</section>
+
 
 
 
@@ -441,257 +477,68 @@
 										<div class="swiper-wrapper" id="swiper-wrapper-7b0ad107e98e993d6" aria-live="off" style="transform: translate3d(-2398px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="4 / 9" style="width: 369.667px; margin-right: 30px;" data-swiper-slide-index="0">
 												<div class="dz-team style-1 text-center m-b10">
 													<div class="dz-media">
-														<img src="images/team/pic1.jpg" alt="">
-														<ul class="team-social">
-															<li>
-																<a href="https://www.facebook.com" target="_blank" class="facebook">
-																	<i class="fab fa-facebook-f"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.twitter.com" target="_blank" class="twitter">
-																	<i class="fab fa-twitter"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.instagram.com" target="_blank" class="instagram">
-																	<i class="fab fa-instagram"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.youtube.com" target="_blank" class="youtube">
-																	<i class="fab fa-youtube"></i>
-																</a>
-															</li>
-														</ul>
+														<img src="images/team/team1.jpeg" alt="">
+														
 													</div>
-													<div class="dz-content">
-														<h3 class="dz-name">Mike Dooley</h3>
-														<h6 class="dz-position text-primary">Contractor</h6>
-													</div>
+													
 												</div>
 											</div><div class="swiper-slide swiper-slide-duplicate" role="group" aria-label="5 / 9" style="width: 369.667px; margin-right: 30px;" data-swiper-slide-index="1">
 												<div class="dz-team style-1 text-center m-b10">
 													<div class="dz-media">
-														<img src="images/team/pic2.jpg" alt="">
-														<ul class="team-social">
-															<li>
-																<a href="https://www.facebook.com" target="_blank" class="facebook">
-																	<i class="fab fa-facebook-f"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.twitter.com" target="_blank" class="twitter">
-																	<i class="fab fa-twitter"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.instagram.com" target="_blank" class="instagram">
-																	<i class="fab fa-instagram"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.youtube.com" target="_blank" class="youtube">
-																	<i class="fab fa-youtube"></i>
-																</a>
-															</li>
-														</ul>
+														<img src="images/team/team2.jpeg" alt="">
+														
 													</div>
-													<div class="dz-content">
-														<h3 class="dz-name">Daniel Orson</h3>
-														<h6 class="dz-position text-primary">Contractor</h6>
-													</div>
+													
 												</div>
 											</div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" role="group" aria-label="6 / 9" style="width: 369.667px; margin-right: 30px;" data-swiper-slide-index="2">
 												<div class="dz-team style-1 text-center m-b10">
 													<div class="dz-media">
-														<img src="images/team/pic3.jpg" alt="">
-														<ul class="team-social">
-															<li>
-																<a href="https://www.facebook.com" target="_blank" class="facebook">
-																	<i class="fab fa-facebook-f"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.twitter.com" target="_blank" class="twitter">
-																	<i class="fab fa-twitter"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.instagram.com" target="_blank" class="instagram">
-																	<i class="fab fa-instagram"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.youtube.com" target="_blank" class="youtube">
-																	<i class="fab fa-youtube"></i>
-																</a>
-															</li>
-														</ul>
+														<img src="images/team/team3.jpeg" alt="">
+														
 													</div>
-													<div class="dz-content">
-														<h3 class="dz-name">Colin Jameson</h3>
-														<h6 class="dz-position text-primary">Contractor</h6>
-													</div>
+													
 												</div>
 											</div>
 											<div class="swiper-slide swiper-slide-duplicate-active" role="group" aria-label="4 / 9" style="width: 369.667px; margin-right: 30px;" data-swiper-slide-index="0">
 												<div class="dz-team style-1 text-center m-b10">
 													<div class="dz-media">
-														<img src="images/team/pic1.jpg" alt="">
-														<ul class="team-social">
-															<li>
-																<a href="https://www.facebook.com" target="_blank" class="facebook">
-																	<i class="fab fa-facebook-f"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.twitter.com" target="_blank" class="twitter">
-																	<i class="fab fa-twitter"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.instagram.com" target="_blank" class="instagram">
-																	<i class="fab fa-instagram"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.youtube.com" target="_blank" class="youtube">
-																	<i class="fab fa-youtube"></i>
-																</a>
-															</li>
-														</ul>
+														<img src="images/team/team1.jpeg" alt="">
+														
 													</div>
-													<div class="dz-content">
-														<h3 class="dz-name">Mike Dooley</h3>
-														<h6 class="dz-position text-primary">Contractor</h6>
-													</div>
+													
 												</div>
 											</div>
 											<div class="swiper-slide swiper-slide-duplicate-next" role="group" aria-label="5 / 9" style="width: 369.667px; margin-right: 30px;" data-swiper-slide-index="1">
 												<div class="dz-team style-1 text-center m-b10">
 													<div class="dz-media">
-														<img src="images/team/pic2.jpg" alt="">
-														<ul class="team-social">
-															<li>
-																<a href="https://www.facebook.com" target="_blank" class="facebook">
-																	<i class="fab fa-facebook-f"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.twitter.com" target="_blank" class="twitter">
-																	<i class="fab fa-twitter"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.instagram.com" target="_blank" class="instagram">
-																	<i class="fab fa-instagram"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.youtube.com" target="_blank" class="youtube">
-																	<i class="fab fa-youtube"></i>
-																</a>
-															</li>
-														</ul>
+														<img src="images/team/team2.jpeg" alt="">
+														
 													</div>
-													<div class="dz-content">
-														<h3 class="dz-name">Daniel Orson</h3>
-														<h6 class="dz-position text-primary">Contractor</h6>
-													</div>
+													
 												</div>
 											</div>
 											<div class="swiper-slide swiper-slide-prev" role="group" aria-label="6 / 9" style="width: 369.667px; margin-right: 30px;" data-swiper-slide-index="2">
 												<div class="dz-team style-1 text-center m-b10">
 													<div class="dz-media">
-														<img src="images/team/pic3.jpg" alt="">
-														<ul class="team-social">
-															<li>
-																<a href="https://www.facebook.com" target="_blank" class="facebook">
-																	<i class="fab fa-facebook-f"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.twitter.com" target="_blank" class="twitter">
-																	<i class="fab fa-twitter"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.instagram.com" target="_blank" class="instagram">
-																	<i class="fab fa-instagram"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.youtube.com" target="_blank" class="youtube">
-																	<i class="fab fa-youtube"></i>
-																</a>
-															</li>
-														</ul>
+														<img src="images/team/team3.jpeg" alt="">
+														
 													</div>
-													<div class="dz-content">
-														<h3 class="dz-name">Colin Jameson</h3>
-														<h6 class="dz-position text-primary">Contractor</h6>
-													</div>
+												
 												</div>
 											</div>
 										<div class="swiper-slide swiper-slide-duplicate swiper-slide-active" role="group" aria-label="4 / 9" style="width: 369.667px; margin-right: 30px;" data-swiper-slide-index="0">
 												<div class="dz-team style-1 text-center m-b10">
 													<div class="dz-media">
-														<img src="images/team/pic1.jpg" alt="">
-														<ul class="team-social">
-															<li>
-																<a href="https://www.facebook.com" target="_blank" class="facebook">
-																	<i class="fab fa-facebook-f"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.twitter.com" target="_blank" class="twitter">
-																	<i class="fab fa-twitter"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.instagram.com" target="_blank" class="instagram">
-																	<i class="fab fa-instagram"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.youtube.com" target="_blank" class="youtube">
-																	<i class="fab fa-youtube"></i>
-																</a>
-															</li>
-														</ul>
+														<img src="images/team/team1.jpeg" alt="">
+														
 													</div>
-													<div class="dz-content">
-														<h3 class="dz-name">Mike Dooley</h3>
-														<h6 class="dz-position text-primary">Contractor</h6>
-													</div>
+													
 												</div>
 											</div><div class="swiper-slide swiper-slide-duplicate swiper-slide-next" role="group" aria-label="5 / 9" style="width: 369.667px; margin-right: 30px;" data-swiper-slide-index="1">
 												<div class="dz-team style-1 text-center m-b10">
 													<div class="dz-media">
-														<img src="images/team/pic2.jpg" alt="">
-														<ul class="team-social">
-															<li>
-																<a href="https://www.facebook.com" target="_blank" class="facebook">
-																	<i class="fab fa-facebook-f"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.twitter.com" target="_blank" class="twitter">
-																	<i class="fab fa-twitter"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.instagram.com" target="_blank" class="instagram">
-																	<i class="fab fa-instagram"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.youtube.com" target="_blank" class="youtube">
-																	<i class="fab fa-youtube"></i>
-																</a>
-															</li>
-														</ul>
+														<img src="images/team/team2.jpeg" alt="">
+														
 													</div>
 													<div class="dz-content">
 														<h3 class="dz-name">Daniel Orson</h3>
@@ -701,34 +548,10 @@
 											</div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" role="group" aria-label="6 / 9" style="width: 369.667px; margin-right: 30px;" data-swiper-slide-index="2">
 												<div class="dz-team style-1 text-center m-b10">
 													<div class="dz-media">
-														<img src="images/team/pic3.jpg" alt="">
-														<ul class="team-social">
-															<li>
-																<a href="https://www.facebook.com" target="_blank" class="facebook">
-																	<i class="fab fa-facebook-f"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.twitter.com" target="_blank" class="twitter">
-																	<i class="fab fa-twitter"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.instagram.com" target="_blank" class="instagram">
-																	<i class="fab fa-instagram"></i>
-																</a>
-															</li>
-															<li>
-																<a href="https://www.youtube.com" target="_blank" class="youtube">
-																	<i class="fab fa-youtube"></i>
-																</a>
-															</li>
-														</ul>
+														<img src="images/team/team3.jpeg" alt="">
+														
 													</div>
-													<div class="dz-content">
-														<h3 class="dz-name">Colin Jameson</h3>
-														<h6 class="dz-position text-primary">Contractor</h6>
-													</div>
+													
 												</div>
 											</div></div>
 									<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
@@ -832,7 +655,7 @@
 										<p>Mon-Sat: 9am- 6pm</p>
 									</li>
 								</ul>
-								<a  id="openEnquiry" class="btn btn-white enquiry-btn sechedule-btn">Schedule Installation</a>
+								<a  href="contact-us.html" class="btn btn-white enquiry-btn sechedule-btn">Schedule Installation</a>
 							</div>
 						</div>
 					</div>
@@ -841,75 +664,7 @@
             </div>
 
         </div>
-<!-- MODAL -->
-<div class="enquiry-modal" id="enquiryModal">
 
-  <div class="enquiry-box">
-
-    <span class="close-btn" id="closeEnquiry">&times;</span>
-
-    <div class="enquiry-flex">
-
-      <!-- IMAGE -->
-      <div class="enquiry-image">
-        <img src="images/enquiry.jpg" alt="Enquiry">
-      </div>
-
-      <!-- FORM -->
-      <div class="enquiry-form">
-        <h2>Quick Enquiry</h2>
-        <form action="https://formsubmit.co/santyequipment@gmail.com" method="POST">
-
-  <!-- Hidden config -->
-  <input type="hidden" name="_cc" value="sales@santyindia.com">
-  <input type="hidden" name="_subject" value="New Enquiry from Website">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
-  <input type="hidden" name="_captcha" value="false">
-
-   <!-- Name -->
-  <div class="input-group">
-    <i class="fas fa-user"></i>
-    <input type="text" name="name" placeholder="Your Name" required>
-  </div>
-
-  <!-- Email -->
-  <div class="input-group">
-    <i class="fas fa-envelope"></i>
-    <input type="email" name="email" placeholder="Email Address" required>
-  </div>
-
-  <!-- Phone -->
-  <div class="input-group">
-    <i class="fas fa-phone-alt"></i>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-  </div>
-
-  <!-- Services -->
-  <div class="input-group">
-    <i class="fas fa-briefcase"></i>
-    <select name="service" required>
-       <option value="" disabled="" selected="">Select a Service</option>
-                    <option value="Clean Room">Clean Room</option>
-                    <option value="Clean Booth">Clean Booth</option>
-                    <option value="Conveyor Process">Conveyor Process</option>
-                    <option value="Facility Management">Facility Management</option>
-    </select>
-  </div>
-
-  <!-- Message -->
-  <div class="input-group textarea-group">
-    <i class="fas fa-comment"></i>
-    <textarea name="message" rows="2" placeholder="Message"></textarea>
-  </div>
-
-  <button type="submit">Send Enquiry</button>
-</form>
-      </div>
-
-    </div>
-  </div>
-</div>
 
 
 
@@ -1054,6 +809,43 @@ window.addEventListener("load", function(){
   setTimeout(() => {
     loader.style.display = "none";
   }, 600);
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const toggler = document.getElementById('canvasToggle');
+  const canvas  = document.getElementById('mobileCanvas');
+  const overlay = document.getElementById('canvasOverlay');
+  const closeBtn = document.getElementById('closesCanvas');
+
+  if(!toggler || !canvas || !overlay || !closeBtn){
+    console.log("Canvas elements missing");
+    return;
+  }
+
+  /* Open Canvas */
+  toggler.addEventListener('click', function () {
+    canvas.classList.add('active');
+    overlay.classList.add('active');
+  });
+
+  /* Close Canvas */
+  function closeCanvas(){
+    canvas.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  closeBtn.addEventListener('click', closeCanvas);
+  overlay.addEventListener('click', closeCanvas);
+
+  /* Dropdown Toggle */
+  document.querySelectorAll('.has-dropdown > span').forEach(item=>{
+    item.addEventListener('click', function(){
+      this.parentElement.classList.toggle('active');
+    });
+  });
+
 });
 </script>
 
