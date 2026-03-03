@@ -930,6 +930,9 @@ a {
   font-size: 16px;
   top: 0;
 }
+#lift{
+  text-align: left !important;
+}
 .logo-main {
     height: 250px;
     width: 100%;
@@ -22181,37 +22184,6 @@ ul a.rsswidget:hover {
   }
 }
 
-.about-style2 .about-thumb {
-  position: relative;
-  /* margin-top: -200px; */
-}
-@media only screen and (max-width: 1200px) {
-  .about-style2 .about-thumb {
-    margin-top: 0;
-  }
-}
-.about-style2 .about-thumb .popup-youtube {
-  position: absolute;
-  bottom: -45px;
-  left: -45px;
-  z-index: 9;
-}
-.about-style2 .section-head {
-  margin-right: -5px;
-}
-@media only screen and (max-width: 991px) {
-  .about-style2 .about-thumb {
-    margin-top: 0;
-    height: 500px;
-    overflow: hidden;
-  }
-  .about-style2 .about-thumb .popup-youtube {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    bottom: auto;
-  }
-}
 
 .about-style3 .section-head {
   margin-bottom: 20px;
@@ -36094,7 +36066,7 @@ footer .widget_services ul li {
     content:"";
     position:absolute;
     inset:0;
-    background:url('../images/cleanbooth-hover.jpg') center/cover no-repeat;
+    background:url('../images/gallery/why.png') center/cover no-repeat;
     z-index:0;
 }
 
